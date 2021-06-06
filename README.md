@@ -21,10 +21,10 @@ date: "Published on `r format(Sys.time(), '%c')`"
 output: ioslides_presentation
 ---
 
-```{r setup, include=FALSE}
+{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, cache = TRUE, echo = FALSE, 
                       message = FALSE, warning = FALSE)
-```
+
 
 ## Presentation Overview - `r format(Sys.time(), '%d %b %Y')`
 
@@ -32,7 +32,7 @@ I have created an interactive scatter plot using the plotly and mtcars dataset i
 
 ## Motorcars
 
-```{r cars}
+{r cars}
 library(plotly)
 data("mtcars")
 plot_ly(data=mtcars,x=~hp,y=~mpg,color = ~factor(cyl),
