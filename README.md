@@ -15,12 +15,26 @@ Click the following link for the presentation
 **[Link](url)**
 
 ```
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+title: "R Markdown & Plotly"
+author: "Kushan Sarathchandra"
+date: "Published on `r format(Sys.time(), '%c')`"
+output: ioslides_presentation
+---
 
-### Jekyll Themes
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE, echo = FALSE, 
+                      message = FALSE, warning = FALSE)
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ckushaan/Plotly/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Presentation Overview - `r format(Sys.time(), '%d %b %Y')`
 
-### Support or Contact
+I have created an interactive scatter plot using the plotly and mtcars dataset in R.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Motorcars
+
+```{r cars}
+library(plotly)
+data("mtcars")
+plot_ly(data=mtcars,x=~hp,y=~mpg,color = ~factor(cyl),
+size=~wt,type="scatter",mode="markers")
+```
