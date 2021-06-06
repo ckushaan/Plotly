@@ -12,7 +12,7 @@ Create a web page presentation using R Markdown that features a plot created wit
 
 Click the following link for the presentation
 
-**[Link](url)**
+**[Link](https://ckushaan.github.io/Plotly/Ploty.html#1)**
 
 ## Source Code
 
